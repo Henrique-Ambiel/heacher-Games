@@ -3,10 +3,9 @@ function pesquisar(){
    
 //Acessa as coisas que estão no documento html e pega o ID resultados-pesquisa
 let section = document.getElementById("resultados-pesquisa");
-console.log(section);
 
 //Inicializa uma string vazia para armazenar resultados
-let resultados = ""
+let resultados = "";
 
 //Itera sobre cada dado da lista
 for (let dado of dados) {
