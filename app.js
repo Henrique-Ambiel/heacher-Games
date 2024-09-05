@@ -22,6 +22,6 @@ for (let dado of dados) {
 }
 
 //Atribui os resultados
-section.innerHTML = resultados
+section.innerHTML = resultados;
 
 }
