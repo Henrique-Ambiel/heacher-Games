@@ -39,4 +39,5 @@ Faça o clone do repositório:
 - Explore as funcionalidades de adicionar e pesquisar jogos.
 
 🎯 Objetivo
+
 Este repositório foi criado como parte de uma imersão educativa, com o intuito de introduzir e consolidar os conceitos básicos de desenvolvimento web, aplicados a um projeto prático e relevante.
