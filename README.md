@@ -29,6 +29,7 @@ Os conceitos básicos aprendidos durante a imersão foram aplicados para estrutu
 /script.js: Código responsável pelas funcionalidades interativas.
 
 🚀 Como Utilizar
+
 Faça o clone do repositório:
 bash
 Copiar código
