@@ -34,6 +34,7 @@ Faça o clone do repositório:
 
 git clone https://github.com/Henrique-Ambiel/heacher-Games.git  
 Abra o arquivo index.html em um navegador.
+
 Explore as funcionalidades de adicionar e pesquisar jogos.
 
 🎯 Objetivo
