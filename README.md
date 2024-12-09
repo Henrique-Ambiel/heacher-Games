@@ -31,8 +31,7 @@ Os conceitos básicos aprendidos durante a imersão foram aplicados para estrutu
 🚀 Como Utilizar
 
 Faça o clone do repositório:
-bash
-Copiar código
+
 git clone https://github.com/Henrique-Ambiel/heacher-Games.git  
 Abra o arquivo index.html em um navegador.
 Explore as funcionalidades de adicionar e pesquisar jogos.
