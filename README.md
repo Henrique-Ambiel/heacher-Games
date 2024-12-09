@@ -22,20 +22,21 @@ Os conceitos básicos aprendidos durante a imersão foram aplicados para estrutu
   
 📁 Estrutura do Repositório
 
-/index.html: Página principal com a estrutura do site.
+- /index.html: Página principal com a estrutura do site.
 
-/styles.css: Arquivo de estilos aplicados ao site.
+- /styles.css: Arquivo de estilos aplicados ao site.
 
-/script.js: Código responsável pelas funcionalidades interativas.
+- /script.js: Código responsável pelas funcionalidades interativas.
 
 🚀 Como Utilizar
 
 Faça o clone do repositório:
 
-git clone https://github.com/Henrique-Ambiel/heacher-Games.git  
-Abra o arquivo index.html em um navegador.
+-  git clone https://github.com/Henrique-Ambiel/heacher-Games.git
+  
+-  Abra o arquivo index.html em um navegador.
 
-Explore as funcionalidades de adicionar e pesquisar jogos.
+- Explore as funcionalidades de adicionar e pesquisar jogos.
 
 🎯 Objetivo
 Este repositório foi criado como parte de uma imersão educativa, com o intuito de introduzir e consolidar os conceitos básicos de desenvolvimento web, aplicados a um projeto prático e relevante.
