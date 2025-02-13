@@ -18,24 +18,6 @@ Os conceitos básicos aprendidos durante a imersão foram aplicados para estrutu
 - CSS: Estilização e design;
   
 - JavaScript: Interatividade, manipulação de dados e funcionalidades de pesquisa.
-  
-## 📁 Estrutura do Repositório
-
-- /index.html: Página principal com a estrutura do site.
-
-- /styles.css: Arquivo de estilos aplicados ao site.
-
-- /script.js: Código responsável pelas funcionalidades interativas.
-
-## 🚀 Como Utilizar
-
-Faça o clone do repositório:
-
--  git clone https://github.com/Henrique-Ambiel/heacher-Games.git
-  
--  Abra o arquivo index.html em um navegador.
-
-- Explore as funcionalidades de adicionar e pesquisar jogos.
 
 ## 🎯 Objetivo
 
