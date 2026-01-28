@@ -1,166 +1,593 @@
-/* Importa a fonte Chakra Petch do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+body { margin: 0; 
+    font-family: Arial, sans-serif; 
+    background: #0f172a; 
+    color: white; 
+} 
 
-/* Estiliza o corpo da página */
-body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #0396A6; /* Cor de fundo da página */
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    height: 100vh; /* Preenche a altura total da viewport */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
+section { 
+    padding: 80px 40px; 
+} 
+
+.games { 
+    display: flex; 
+    gap: 20px; 
+} 
+
+.game-card { 
+    background: #1e293b; 
+    padding: 20px; 
+    border-radius: 8px; 
 }
 
-/* Estiliza os títulos h1 */
-h1 {
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #F2D64B; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000000;
 }
 
-/* Estiliza as seções da página */
-section {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+/* Fundo hexagonal */
+.hero-bg-hex {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fillRule='evenodd'%3E%3Cg fill='%230599ad'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* Estiliza os inputs dentro das seções */
-section input {
-    width: 30rem; /* Largura dos inputs */
-    border: none; /* Remove a borda padrão */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 1.5rem; /* Borda arredondada */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #000000; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+/* Conteúdo */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 24px;
+  text-align: center;
 }
 
-/* Estiliza os botões dentro das seções */
-section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #F2D64B; /* Cor de fundo do botão */
-    color: #000000; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+/* Logo + texto */
+.hero-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* 👈 MAIS PRÓXIMO DA IMAGEM */
+  margin-bottom: 24px;
 }
 
-/* Adiciona efeito hover ao botão de pesquisa */
-section button:hover {
-    background-color: #A8D977; /* Muda a cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+.hero-brand img {
+  border-radius: 50%;
+  background-color: #ffffff;
+  width: 56px;
+  height: 56px;
 }
 
-/* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 0.6rem; /* Borda arredondada */
+.hero-brand span {
+  color: #0599ad;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-/* Estiliza cada item de resultado */
-.item-resultado {
-    background: #F2D64B; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+/* Título */
+.hero-title {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.1;
 }
 
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #0396A6; /* Cor do texto */
+.hero-title .accent {
+  color: #fef34d;
 }
 
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #0396A6; /* Cor do texto dos links */
+.hero-title .soft {
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+/* Texto */
+.hero-text {
+  font-size: 1.2rem;
+  color: #bdbdbd;
+  max-width: 640px;
+  margin: 0 auto 40px;
 }
 
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #000000; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
+/* Botão */
+.hero-button {
+  display: inline-block;
+  background-color: #0599ad;
+  color: #000000;
+  padding: 16px 36px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-/* Estiliza o rodapé da página */
-footer {
-    background-color: #56BFA1; /* Cor de fundo do rodapé */
-    color: #000000; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
-    font-size: 1rem; /* Tamanho da fonte */
+.hero-button:hover {
+  background-color: #048599;
+  transform: scale(1.05);
 }
 
+.about {
+  position: relative;
+  padding: 120px 24px;
+  background-color: #0a0a0a;
+  overflow: hidden;
+}
+
+/* Fundo hexagonal */
+.about-bg-hex {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fillRule='evenodd'%3E%3Cg fill='%230599ad'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.about-content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.about-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.about-tag {
+  display: inline-block;
+  color: #0599ad;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 800;
+  margin: 16px 0 24px;
+  color: #ffffff;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: #bdbdbd;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-description .highlight {
+  color: #fef34d;
+}
+
+/* Cards */
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #5f3f31;
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: #0599ad;
+  transform: translateY(-4px);
+}
+
+.about-icon {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(5, 153, 173, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.about-card h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  line-height: 1.6;
+}
+
+.gameshowcase {
+  position: relative;
+  padding: 120px 20px;
+  background-color: #0d1b2a;
+  overflow: hidden;
+}
+
+/* Pattern */
+.hex-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='%230599ad'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-header .tag {
+  color: #00b4d8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  font-size: 48px;
+  color: #ffffff;
+  margin: 16px 0;
+}
+
+.section-header h2 span {
+  color: #ffd166;
+}
+
+.section-header p {
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+/* Layout */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Imagem */
+.game-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.gradient-border {
+  position: absolute;
+  inset: -6px;
+  background: linear-gradient(90deg, #00b4d8, #ffd166, #6c5ce7);
+  border-radius: 20px;
+  filter: blur(10px);
+  opacity: 0.6;
+}
+
+.image-box {
+  position: relative;
+  background-color: #1b263b;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #334155;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 320px;
+}
+
+/* Info */
+.game-info h3 {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.game-info p {
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Features */
+.features {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.trailer-section {
+  position: relative;
+  padding: 120px 20px;
+  background-color: #1b263b;
+  overflow: hidden;
+}
+
+/* Reaproveita o pattern */
+.trailer-section .hex-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='%230599ad'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Header (mesmo padrão do showcase) */
+.trailer-section .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.trailer-section .tag {
+  color: #00b4d8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.trailer-section h2 {
+  font-size: 48px;
+  color: #ffffff;
+  margin: 16px 0;
+}
+
+.trailer-section h2 span {
+  color: #ffd166;
+}
+
+.trailer-section p {
+  color: #cbd5e1;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Vídeo */
+.video-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-glow {
+  position: absolute;
+  inset: -6px;
+  background: linear-gradient(90deg, #00b4d8, #ffd166, #6c5ce7);
+  border-radius: 20px;
+  filter: blur(12px);
+  opacity: 0.6;
+}
+
+.video-box {
+  position: relative;
+  background-color: #0d1b2a;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #334155;
+  aspect-ratio: 16 / 9;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Hover */
+.video-wrapper:hover .video-glow {
+  opacity: 0.85;
+}
+
+.footer {
+  position: relative;
+  background-color: #0d1b2a;
+  border-top: 1px solid #334155;
+  overflow: hidden;
+}
+
+.footer .hex-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='%230599ad'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.footer-content {
+  position: relative;
+  padding: 80px 20px 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.footer-brand p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.brand-header img {
+  background-color: #ffffff;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-header span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer h4 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00b4d8;
+}
+
+.footer-contact a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+  color: #00b4d8;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 180, 216, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.footer-contact a:hover .icon-box {
+  background-color: rgba(0, 180, 216, 0.2);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.footer-bottom .made {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.footer-bottom .made span {
+  color: #ffd166;
+  font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Tamanho da fonte em telas menores */
-        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
-    }
-
-    section input {
-        width: 25rem; /* Largura dos inputs em telas menores */
-        padding: 0.8rem; /* Espaçamento interno em telas menores */
-    }
-
-    .resultados-pesquisa {
-        width: 40rem; /* Largura da caixa de resultados em telas menores */
-        height: 40vh; /* Altura da caixa de resultados em telas menores */
-    }
-
-    .item-resultado h2 {
-        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
-    }
+  .trailer-section h2 {
+    font-size: 36px;
+  }
 }
 
-/* Responsividade para celulares */
-@media (max-width: 480px) {
 
-    h1 {
-        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
-        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
-    }
+/* Responsivo */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    section input {
-        width: 17rem; /* Largura total dos inputs em telas pequenas */
-    }
+  .features {
+    justify-content: center;
+  }
+}
 
-    section button {
-        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
-        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
-    }
 
-    .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
-        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
-    }
-
-    .item-resultado h2 {
-        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
-    }
-
-    footer {
-        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
-    }
+/* Responsivo */
+@media (max-width: 768px) {
+  .about-features {
+    grid-template-columns: 1fr;
+  }
 }

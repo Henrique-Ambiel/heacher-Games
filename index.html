@@ -1,32 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!--Cabeçalho do site-->
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> <!--Codificação de caracteres-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Fornece informações ao mecanismo de busca-->
-    <link rel="stylesheet" href="styles.css"> <!--Conecta arquivos CSS e outras e outros recursos-->
-    <title>Heacher Games</title> <!--Título da página-->
+  <meta charset="UTF-8" />
+  <title>Heacher Games</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="Logo circular.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<!--Corpo do site-->
 <body>
-    <header>
-        <h1> Heacher Games </h1> <!--Título principal-->
-    </header>
-<main> <!--Conteúdo principal da página-->
-    <section>
-    <input type="text" placeholder="Encontre nossos jogos aqui!" id="campo-pesquisa"> <!--Barra de pesquisa-->
-    <button onclick="pesquisar()"> Pesquisar </button> <!--Botão de pesquisa-->
-    </section>
-    <section>
-        <section class = "resultados-pesquisa" 
-        id = "resultados-pesquisa"> <!--Importa características de uma classe Css-->
-    </section>
-</main>
-<footer>
-    <p>Estúdio de Jogos - 2024</p>
-    <p>Entre em contato com a gente: henriqueambiel@gmail.com</p>
+
+  <main>
+
+    <section class="hero">
+  <!-- Backgrounds -->
+  <div class="hero-bg-radial"></div>
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-bg-hex"></div>
+
+  <!-- Conteúdo -->
+  <div class="hero-content">
+    <div class="hero-brand">
+      <img
+        src="Logo circular.png"
+        alt="Heacher Games Logo"
+      />
+      <span>Heacher Games</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="accent">Mudamos vidas</span><br />
+      <span class="soft">através de jogos</span>
+    </h1>
+
+    <p class="hero-text">
+      Entre para uma jornada de entretenimento onde a diversão e a
+      competição se encontram. Conheça nossos jogos e faça parte dessa
+      comunidade!
+    </p>
+
+    <a href="#about" class="hero-button">
+      Conhecer mais
+    </a>
+  </div>
+
+  <!-- Fade inferior -->
+  <div class="hero-bottom-fade"></div>
+</section>
+
+
+    <section id="about" class="about">
+  <!-- Fundo hexagonal -->
+  <div class="about-bg-hex"></div>
+
+  <div class="about-content">
+    <div class="about-header">
+      <span class="about-tag">Sobre nós</span>
+
+      <h2 class="about-title">A Heacher Games</h2>
+
+      <p class="about-description">
+        A <strong class="highlight">Heacher Games</strong> muda vidas através de
+        jogos! Somos uma startup focada em criar experiências de entretenimento
+        que unem pessoas, promovem a competição saudável e, acima de tudo,
+        proporcionam muita diversão.
+      </p>
+    </div>
+
+    <div class="about-features">
+      <!-- Card 1 -->
+      <div class="about-card">
+        <div class="about-icon">
+          🎯
+        </div>
+        <h3>Nossa Missão</h3>
+        <p>
+          Criar experiências de jogos que transformam e conectam pessoas ao
+          redor do mundo.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="about-card">
+        <div class="about-icon">
+          ✨
+        </div>
+        <h3>Inovação</h3>
+        <p>
+          Desenvolvemos jogos únicos que misturam mecânicas inovadoras com
+          diversão garantida.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="gameshowcase" class="gameshowcase">
+  <!-- Pattern de fundo -->
+  <div class="hex-pattern"></div>
+
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="section-header">
+      <span class="tag">Nosso Jogo</span>
+      <h2>Conheça o <span>Espadelha</span></h2>
+      <p>
+        Um battle royale que mistura competição e diversão como você nunca viu
+        antes. Prepare-se para batalhas épicas!
+      </p>
+    </div>
+
+    <div class="content">
+      <!-- Imagem do jogo -->
+      <div class="game-image">
+        <div class="gradient-border"></div>
+        <div class="image-box">
+          <img
+            src="Espadelha.png"
+            alt="Heacher Games - Espadelha"
+          />
+        </div>
+      </div>
+
+      <!-- Informações -->
+      <div class="game-info">
+        <div>
+          <h3>Entre para essa jornada de entretenimento!</h3>
+          <p>
+            Espadelha é o nosso projeto principal: um battle royale inovador onde
+            estratégia, habilidade e diversão se encontram.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+          <div class="feature">
+            ⚔️ <span>Battle Royale</span>
+          </div>
+          <div class="feature">
+            👥 <span>Multiplayer</span>
+          </div>
+          <div class="feature">
+            ⚡ <span>Ação Intensa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="trailer-section">
+  <!-- Pattern de fundo -->
+  <div class="hex-pattern"></div>
+
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="section-header">
+      <span class="tag">Trailer</span>
+      <h2>Veja o <span>Espadelha</span> em ação</h2>
+      <p>
+        Assista ao trailer e descubra o que torna nosso jogo especial
+      </p>
+    </div>
+
+    <!-- Vídeo -->
+    <div class="video-wrapper">
+      <div class="video-glow"></div>
+      <div class="video-box">
+        <iframe
+          src="https://www.youtube.com/embed/FVoFMXPLx9g"
+          title="Trailer do Espadelha"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="footer">
+  <!-- Pattern -->
+  <div class="hex-pattern"></div>
+
+  <div class="container footer-content">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="brand-header">
+          <img src="Logo quadrado.png" alt="Heacher Games Logo">
+          <span>Heacher Games</span>
+        </div>
+        <p>
+          Mudamos vidas através de jogos. Junte-se a nós nessa jornada de
+          entretenimento e diversão!
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-links">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#about">Sobre Nós</a></li>
+          <li><a href="#gameshowcase">Espadelha</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato -->
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <ul>
+          <li>
+            <a href="mailto:heachergames@gmail.com">
+              <div class="icon-box">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <span>heachergames@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/heacher_games/"
+              target="_blank"
+            >
+              <div class="icon-box">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <span>@heacher_games</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/heacher-games/?viewAsMember=true"
+              target="_blank"
+            >
+              <div class="icon-box">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <span>Heacher Games</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>
+        © <span id="year"></span> Heacher Games. Todos os direitos reservados.
+      </p>
+      <p class="made">
+        Feito com <span>paixão</span> por jogos
+      </p>
+    </div>
+  </div>
 </footer>
-<script src="dados.js"></script> <!--Inclui scripts em JavaScript-->
-<script src="app.js"></script>
+
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
